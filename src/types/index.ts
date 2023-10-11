@@ -11,3 +11,15 @@ export type SiteConfig = {
         linkedin: string;
     };
 };
+
+export type NavItem = {
+    title: string;
+    href: string;
+    disabled?: boolean;
+};
+
+export type NavItems = NavItem[];
+
+export type NavConfig = {
+    items: NavItems;
+};
