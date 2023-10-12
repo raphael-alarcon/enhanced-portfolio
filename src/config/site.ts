@@ -2,7 +2,8 @@ import { NavConfig, SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
     title: "Portfolio",
-    description: "My open source portfolio crafted with NextJS, Shadcn/UI, and Bun.",
+    description:
+        "My open source portfolio crafted with NextJS, Shadcn/UI, and Bun.",
     author: "Raphael ALARCON",
     url: "",
     email: "raph.alarcon1@gmail.com",
@@ -16,10 +17,6 @@ export const siteConfig: SiteConfig = {
 
 export const navConfig: NavConfig = {
     items: [
-        {
-            title: "Home",
-            href: "/",
-        },
         {
             title: "About",
             href: "/about",
