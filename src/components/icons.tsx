@@ -1,10 +1,17 @@
-import { AlertTriangle, LucideProps, LucideIcon, Settings } from "lucide-react";
+import {
+    AlertTriangle,
+    LucideProps,
+    LucideIcon,
+    Settings,
+    Mail,
+} from "lucide-react";
 
 export type Icon = LucideIcon;
 
 export const Icons = {
     warning: AlertTriangle,
     settings: Settings,
+    mail: Mail,
     logo: ({ ...props }: LucideProps) => (
         <svg
             version="1.0"

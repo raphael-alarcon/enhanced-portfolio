@@ -15,7 +15,7 @@ export type NavigationElementProps = {
 export function NavigationButton({ item }: NavigationElementProps) {
     return (
         <NavigationMenuItem>
-            <Link href={item.href} legacyBehavior passHref className="flex">
+            <Link href={item.href} legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     {item.title}
                 </NavigationMenuLink>

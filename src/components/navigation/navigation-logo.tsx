@@ -9,7 +9,7 @@ import { Icons } from "../icons";
 
 export function NavigationLogo({ item }: NavigationElementProps) {
     return (
-        <NavigationMenuItem className="list-none">
+        <NavigationMenuItem>
             <Link href={item.href} legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuLogoStyle()}>
                     <Icons.logo size={32} />

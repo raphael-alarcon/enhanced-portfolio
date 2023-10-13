@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
+            <head></head>
             <body className={inter.className + "min-h-screen flex-col"}>
                 <Navigation items={navConfig.items} />
                 {children}
