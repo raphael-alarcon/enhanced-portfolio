@@ -1,43 +1,45 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-    darkMode: ["class"],
-    content: [
-        "./pages/**/*.{ts,tsx}",
-        "./components/**/*.{ts,tsx}",
-        "./app/**/*.{ts,tsx}",
-        "./src/**/*.{ts,tsx}",
-    ],
-    theme: {
-        container: {
-            center: true,
-            padding: "2rem",
-            screens: {
-                "2xl": "1400px",
-            },
-        },
-        extend: {
-            keyframes: {
-                "accordion-down": {
-                    from: { height: 0 },
-                    to: { height: "var(--radix-accordion-content-height)" },
-                },
-                "accordion-up": {
-                    from: { height: "var(--radix-accordion-content-height)" },
-                    to: { height: 0 },
-                },
-            },
-            animation: {
-                "accordion-down": "accordion-down 0.2s ease-out",
-                "accordion-up": "accordion-up 0.2s ease-out",
-            },
-            colors: {
-                text: "var(--text)",
-                background: "var(--background)",
-                primary: "var(--primary)",
-                secondary: "var(--secondary)",
-                accent: "var(--accent)",
-            },
-        },
-    },
-    plugins: [require("tailwindcss-animate")],
+	darkMode: ["class"],
+	content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+	theme: {
+		container: {
+			center: true,
+			padding: "2rem",
+			screens: {
+				"2xl": "1400px",
+			},
+		},
+		extend: {
+			keyframes: {
+				"accordion-down": {
+					from: { height: 0 },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: 0 },
+				},
+			},
+			animation: {
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+			},
+			colors: {
+				text: "#1c1717",
+				background: "#ffffff",
+				primary: "#54e275",
+				secondary: "#d1f5d9",
+				accent: "#607171",
+				ghost: "hsl(210 40% 96.1%)",
+			},
+		},
+		fontFamily: {
+			sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+			heading: ["var(--font-heading)"],
+		},
+	},
+	plugins: [require("tailwindcss-animate")],
 };

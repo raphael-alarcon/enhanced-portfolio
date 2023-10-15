@@ -38,6 +38,7 @@ export function Navigation({ items }: NavConfig) {
                 <NavigationMenuItem className="flex">
                     <Button variant={"secondary"} asChild>
                         <Link href="/login" passHref>
+                            <Icons.mail className="mr-2 h-4 w-4" />
                             Login with Email
                         </Link>
                     </Button>
