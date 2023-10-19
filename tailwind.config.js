@@ -1,9 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const { nextui } = require("@nextui-org/react");
+
+const colors = {
+	light: {
+		text: "#000000",
+		background: "#f2f2f2",
+		primary: "#d9c9c9",
+		secondary: "#aec6ae",
+		accent: "#59597d",
+	},
+	dark: {
+		text: "#ffffff",
+		background: "#0d0d0d",
+		primary: "#395139",
+		secondary: "#362626",
+		accent: "#8282a6",
+	},
+};
 
 module.exports = {
 	darkMode: ["class"],
-	content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+	content: [
+		"./pages/**/*.{ts,tsx}",
+		"./components/**/*.{ts,tsx}",
+		"./app/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}",
+		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+	],
 	theme: {
 		container: {
 			center: true,
@@ -27,19 +51,21 @@ module.exports = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
-			colors: {
-				text: "#1c1717",
-				background: "#ffffff",
-				primary: "#54e275",
-				secondary: "#d1f5d9",
-				accent: "#607171",
-				ghost: "hsl(210 40% 96.1%)",
-			},
+			colors: colors.light,
 		},
 		fontFamily: {
 			sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
 			heading: ["var(--font-heading)"],
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		nextui({
+			themes: {
+				light: colors.light,
+				dark: colors.dark,
+			},
+		}),
+	],
+	darkMode: "class",
 };

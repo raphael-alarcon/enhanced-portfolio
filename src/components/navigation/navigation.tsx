@@ -1,49 +1,59 @@
 "use client";
 
-import * as React from "react";
+//#region Imports
+import React from "react";
 
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 import { NavConfig, NavItem } from "@/types";
-import { NavigationButton } from "./navigation-button";
-import { NavigationLogo } from "./navigation-logo";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import { Icons } from "../icons";
+import {
+	Button,
+	Navbar,
+	NavbarBrand,
+	NavbarContent,
+	NavbarItem,
+} from "@nextui-org/react";
+import { cva } from "class-variance-authority";
+//#endregion
 
 const logoItem: NavItem = {
-    title: "Raphaël Alarcon",
-    href: "/",
+	title: "Raphaël Alarçon",
+	href: "/",
 };
 
 export function Navigation({ items }: NavConfig) {
-    const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
+	const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
-    return (
-        <div className="container z-40 flex items-center">
-            <NavigationMenu className="flex h-20 min-w-full justify-between py-4">
-                <NavigationMenuList className="flex gap-6 md:gap-10">
-                    <NavigationLogo item={logoItem} />
-                    {items?.length ? (
-                        <div className="flex items-center">
-                            {items.map((item, index) => (
-                                <NavigationButton key={index} item={item} />
-                            ))}
-                        </div>
-                    ) : null}
-                </NavigationMenuList>
-                <NavigationMenuItem className="flex">
-                    <Button variant={"secondary"} asChild>
-                        <Link href="/login" passHref>
-                            <Icons.mail className="mr-2 h-4 w-4" />
-                            Login with Email
-                        </Link>
-                    </Button>
-                </NavigationMenuItem>
-            </NavigationMenu>
-        </div>
-    );
+	return (
+		<Navbar
+			maxWidth="full"
+			className="flex justify-start max-w-none w-full bg-transparent gap-6 space-between border-b-1 border-menu"
+			shouldHideOnScroll>
+			<NavbarBrand className="grow-0">
+				<Link
+					className="font-bold flex flex-row items-center gap-2"
+					href={logoItem.href}
+					passHref>
+					<Icons.logo size={32} />
+					{logoItem.title}
+				</Link>
+			</NavbarBrand>
+			{items?.length ? (
+				<NavbarContent
+					className="hidden justify-end md:flex gap-6"
+					data-justify={null}>
+					{items.map((item, index) => (
+						<NavbarItem key={index}>
+							<Link
+								href={item.href}
+								passHref
+								className="link-menu">
+								{item.title}
+							</Link>
+						</NavbarItem>
+					))}
+				</NavbarContent>
+			) : null}
+		</Navbar>
+	);
 }
