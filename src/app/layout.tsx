@@ -4,21 +4,24 @@ import type { Metadata } from "next";
 import { navConfig, siteConfig } from "@/config/site";
 import { Navigation } from "@/components/navigation/navigation";
 
-import { Bodoni_Moda, Inter, Onest } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Compose, providers } from "@/components/compose";
 import { SideNavigation } from "@/components/navigation/side-navigation";
+import { Background } from "@/components/background";
 //#endregion
 
 //#region Fonts
 const fontSans = Inter({
+	weight: "400",
 	subsets: ["latin"],
 	variable: "--font-sans",
 });
 
-const fontHeading = Bodoni_Moda({
-	weight: "600",
-	subsets: ["latin"],
+const fontHeading = localFont({
+	src: "../../public/fonts/TAN-PEARL.woff2",
+	weight: "700",
 	variable: "--font-heading",
 });
 //#endregion
@@ -45,11 +48,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			<body
 				className={cn(
 					"min-h-screen antialiased font-sans overflow-hidden",
-					fontSans.variable,
-					fontHeading.variable
+					fontHeading.variable,
+					fontSans.variable
 				)}>
 				<Compose providers={providers}>
 					<div className="flex flex-row min-h-screen min-w-full">
+						<Background />
 						<SideNavigation />
 						<div className="flex-1">
 							<Navigation items={navConfig.items} />

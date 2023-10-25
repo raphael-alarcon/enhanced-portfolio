@@ -10,11 +10,11 @@ export default function IndexPage() {
 				<div className="gap-4 container flex items-center flex-col max-w-[82rem] relative text-center sm:text-left sm:items-start">
 					<Link
 						href={siteConfig.links.github}
-						className="flex absolute -top-10 items-center rounded-2xl bg-primary px-4 py-1.5 text-sm font-medium gap-2"
+						className="flex absolute -top-12 items-center rounded-2xl bg-primary px-4 py-1.5 text-sm font-medium gap-2"
 						target="_blank">
 						Visit my <Icons.gitHub className="h-4 w-4" />
 					</Link>
-					<h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+					<h1 className="max-w-[52rem] font-heading text-2xl sm:text-2xl md:text-3xl lg:text-5xl/normal">
 						I&rsquo;m Raphaël, the web developper you need to fully
 						express yourself.
 					</h1>
