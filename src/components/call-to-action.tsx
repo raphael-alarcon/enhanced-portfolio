@@ -2,18 +2,17 @@
 
 import { Button } from "@nextui-org/react";
 import { Icons } from "./icons";
+import Link from "next/link";
 
 export function CallToAction() {
-	return (
-		<div className="flex flex-col items-start gap-4">
-			<Button
-				size="md"
-				radius="md"
-				variant="bordered"
-				color="primary"
-				endContent={<Icons.rightArrow width={15} />}>
-				Hire me
-			</Button>
-		</div>
-	);
+    return (
+        <div className="flex justify-center sm:self-start">
+            <Link
+                className="font-semibold underline underline-offset-[10px] decoration-2"
+                href="/contact"
+                passHref>
+                Raph.alarcon@gmail.com
+            </Link>
+        </div>
+    );
 }

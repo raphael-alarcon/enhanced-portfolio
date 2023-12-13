@@ -23,3 +23,11 @@ export type NavItems = NavItem[];
 export type NavConfig = {
     items: NavItems;
 };
+
+export type BackgroundConfig = {
+    opacity: string;
+    filter: {
+        frequency: number;
+        nbOctaves: number;
+    };
+};
