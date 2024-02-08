@@ -3,7 +3,7 @@
 //#region Imports
 import React from "react";
 
-import { NavConfig, NavItem } from "@/types";
+import { NavConfig } from "@/types";
 import Link from "next/link";
 import { Icons } from "../icons";
 import {
@@ -11,32 +11,26 @@ import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    NavbarMenuToggle,
 } from "@nextui-org/react";
+import { DenDropdown } from "./dropdown";
+import { logoConfig } from "@/config/site";
 //#endregion
 
-const logoItem: NavItem = {
-    title: "Raphaël Alarçon",
-    href: "/",
-};
-
 export function Navigation({ items }: NavConfig) {
-    const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
     return (
         <Navbar
             maxWidth="full"
             height="6rem"
-            className="flex max-w-none w-full bg-transparent gap-6 space-between px-10 uppercase"
-            isBlurred={false}
-            shouldHideOnScroll>
+            className="fixed flex bg-transparent px-10 uppercase"
+            isBlurred={false}>
             <NavbarBrand className="grow-0">
                 <Link
                     className="font-bold flex flex-row items-center gap-2"
-                    href={logoItem.href}
+                    href={logoConfig.href}
                     passHref>
                     <Icons.logo size={32} />
-                    {logoItem.title}
+                    {logoConfig.title}
                 </Link>
             </NavbarBrand>
             <NavbarContent className="flex gap-12" data-justify="null">
@@ -54,10 +48,7 @@ export function Navigation({ items }: NavConfig) {
                         ))}
                     </div>
                 ) : null}
-                <NavbarMenuToggle
-                    onClick={() =>
-                        setShowMobileMenu((prev) => !prev)
-                    }></NavbarMenuToggle>
+                <DenDropdown isOpenDefault={false}/>
             </NavbarContent>
         </Navbar>
     );

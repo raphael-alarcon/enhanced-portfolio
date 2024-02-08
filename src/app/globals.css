@@ -3,76 +3,94 @@
 @tailwind utilities;
 
 html {
-    background-color: #f2f2f2;
-    overflow: hidden;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
 }
 
 body {
-    font-feature-settings: "rlig" 1, "calt" 1;
-    color: hsl(var(--foreground));
+	font-feature-settings: "rlig" 1, "calt" 1;
+	color: hsl(var(--foreground));
+	min-height: fit-content;
 }
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-    --foreground: 222.2 47.4% 11.2%;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+	--foreground: 222.2 47.4% 11.2%;
+	box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 @layer base {
-    :root {
-        --background: 0 0% 100%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 10% 10%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 10% 10%;
-        --primary: 180 8% 66%;
-        --primary-foreground: 0 10% 10%;
-        --secondary: 240 7% 81%;
-        --secondary-foreground: 0 10% 10%;
-        --muted: 0 0% 20%;
-        --muted-foreground: 0 10% 70%;
-        --accent: 180 8% 41%;
-        --accent-foreground: 0 0% 100%;
-        --destructive: 0 85% 60%;
-        --destructive-foreground: 0 10% 10%;
-        --border: 0 0% 20%;
-        --input: 0 0% 20%;
-        --ring: 180 8% 40%;
-        --radius: 0.5rem;
-    }
+	:root {
+		--background: 0 0% 100%;
+		--card: 0 0% 100%;
+		--card-foreground: 0 10% 10%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 0 10% 10%;
+		--primary: 180 8% 66%;
+		--primary-foreground: 0 10% 10%;
+		--secondary: 240 7% 81%;
+		--secondary-foreground: 0 10% 10%;
+		--muted: 0 0% 20%;
+		--muted-foreground: 0 10% 70%;
+		--accent: 180 8% 41%;
+		--accent-foreground: 0 0% 100%;
+		--destructive: 0 85% 60%;
+		--destructive-foreground: 0 10% 10%;
+		--border: 0 0% 20%;
+		--input: 0 0% 20%;
+		--ring: 180 8% 40%;
+		--radius: 0.5rem;
+	}
 
-    .dark {
-        --background: 0 0% 0%;
-        --foreground: 0 10% 90%;
-        --card: 0 0% 0%;
-        --card-foreground: 0 10% 90%;
-        --popover: 0 0% 0%;
-        --popover-foreground: 0 10% 90%;
-        --primary: 180 8% 34%;
-        --primary-foreground: 0 10% 90%;
-        --secondary: 240 7% 19%;
-        --secondary-foreground: 0 10% 90%;
-        --muted: 0 0% 80%;
-        --muted-foreground: 0 10% 90%;
-        --accent: 180 8% 59%;
-        --accent-foreground: 0 0% 0%;
-        --destructive: 0 62% 30%;
-        --destructive-foreground: 0 10% 10%;
-        --border: 0 0% 60%;
-        --input: 0 0% 80%;
-        --ring: 180 8% 60%;
-    }
+	.dark {
+		--background: 0 0% 0%;
+		--foreground: 0 10% 90%;
+		--card: 0 0% 0%;
+		--card-foreground: 0 10% 90%;
+		--popover: 0 0% 0%;
+		--popover-foreground: 0 10% 90%;
+		--primary: 180 8% 34%;
+		--primary-foreground: 0 10% 90%;
+		--secondary: 240 7% 19%;
+		--secondary-foreground: 0 10% 90%;
+		--muted: 0 0% 80%;
+		--muted-foreground: 0 10% 90%;
+		--accent: 180 8% 59%;
+		--accent-foreground: 0 0% 0%;
+		--destructive: 0 62% 30%;
+		--destructive-foreground: 0 10% 10%;
+		--border: 0 0% 60%;
+		--input: 0 0% 80%;
+		--ring: 180 8% 60%;
+	}
 }
 
+/* body * {
+	border: solid 1px red;
+}
+ */
 .link-menu {
-    @apply block relative text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm text-foreground/60 after:content-[''] after:absolute after:w-full after:h-[.1em] after:bottom-0 after:left-0 after:bg-foreground/80 after:opacity-0 after:transition-all after:-translate-x-full hover:after:opacity-100 hover:after:translate-x-0 overflow-hidden;
+	@apply block relative text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm text-foreground/60 after:content-[''] after:absolute after:w-full after:h-[.1em] after:bottom-0 after:left-0 after:bg-foreground/80 after:opacity-0 after:transition-all after:-translate-x-full hover:after:opacity-100 hover:after:translate-x-0 overflow-hidden;
+}
+
+.center-children {
+	@apply flex items-center justify-center;
+}
+
+h1.test {
+	background: linear-gradient(165deg, #fff 195px, #000 195px) fixed;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
 }

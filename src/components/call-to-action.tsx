@@ -3,15 +3,16 @@
 import { Button } from "@nextui-org/react";
 import { Icons } from "./icons";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export function CallToAction() {
     return (
-        <div className="flex justify-center sm:self-start">
+        <div className="">
             <Link
-                className="font-semibold underline underline-offset-[10px] decoration-2"
+                className="font-normal underline underline-offset-[10px] decoration-1 text-gray-500"
                 href="/contact"
                 passHref>
-                Raph.alarcon@gmail.com
+                {siteConfig.email}
             </Link>
         </div>
     );

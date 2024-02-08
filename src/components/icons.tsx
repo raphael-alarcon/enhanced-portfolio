@@ -5,9 +5,9 @@ import {
     Settings,
     Mail,
     MoveRight,
-    AlignRight,
-    Contrast,
-    Menu,
+    ScanFace,
+    Palette,
+    Languages,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -17,6 +17,9 @@ export const Icons = {
     settings: Settings,
     mail: Mail,
     rightArrow: MoveRight,
+    login: ScanFace,
+    theme: Palette,
+    lang: Languages,
     gitHub: ({ ...props }: LucideProps) => (
         <svg
             aria-hidden="true"

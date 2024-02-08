@@ -8,7 +8,6 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Compose, providers } from "@/components/compose";
-import { Background } from "@/components/background";
 //#endregion
 
 //#region Fonts
@@ -46,14 +45,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <html lang="en">
             <body
                 className={cn(
-                    "min-h-screen antialiased font-sans overflow-hidden",
+                    "antialiased font-sans",
                     fontHeading.variable,
                     fontSans.variable
                 )}>
                 <Compose providers={providers}>
-                    <div className="flex flex-row min-h-screen min-w-full">
-                        <Background />
-                        <div className="flex-1">
+                    <div>
+                        <div>
                             <Navigation items={navConfig.items} />
                             {children}
                         </div>
