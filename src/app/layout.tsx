@@ -13,8 +13,8 @@ import { Compose, providers } from "@/components/compose";
 //#region Fonts
 const fontSans = Inter({
     weight: "400",
-    subsets: ["latin"],
     variable: "--font-sans",
+    subsets: ["latin"],
 });
 
 const fontHeading = localFont({
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 )}>
                 <Compose providers={providers}>
                     <div>
-                        <div>
+                        <div className="font-sans">
                             <Navigation items={navConfig.items} />
                             {children}
                         </div>
