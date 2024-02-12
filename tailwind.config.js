@@ -9,6 +9,7 @@ const colors = {
 		primary: "#d9c9c9",
 		secondary: "#aec6ae",
 		accent: "#59597d",
+		ghost: "gray-500",
 	},
 	dark: {
 		text: "#ffffff",
