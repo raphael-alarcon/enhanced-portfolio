@@ -1,38 +1,36 @@
 {
-  "name": "enhanced-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@nextui-org/react": "^2.1.13",
-    "@radix-ui/react-navigation-menu": "^1.1.4",
-    "@radix-ui/react-separator": "^1.0.3",
-    "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.284.0",
-    "next": "13.5.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "shadcn-ui": "^0.4.1",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.5",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.4"
-  }
+	"name": "enhanced-portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@nextui-org/react": "^2.1.13",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.0",
+		"framer-motion": "^10.16.4",
+		"lucide-react": "^0.330.0",
+		"next": "13.5.4",
+		"react": "^18",
+		"react-dom": "^18",
+		"sharp": "^0.33.2",
+		"tailwind-merge": "^2.2.1",
+		"tailwindcss-animate": "^1.0.7",
+		"vaul": "^0.9.0"
+	},
+	"devDependencies": {
+		"typescript": "^5",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"autoprefixer": "^10",
+		"postcss": "^8",
+		"tailwindcss": "^3.3.5",
+		"eslint": "^8",
+		"eslint-config-next": "13.5.4"
+	}
 }
