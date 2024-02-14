@@ -5,7 +5,7 @@ import { Icons } from "../icons";
 import { navConfig } from "@/config/site";
 import { Divider, NavbarMenuToggle, Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
 import { PopoverItem } from "./popover-item";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import useMediaQuery from "@/hooks/use-media-query";
 
 export const DenPopover = () => {
 
