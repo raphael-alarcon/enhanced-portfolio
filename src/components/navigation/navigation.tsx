@@ -12,8 +12,8 @@ import {
     NavbarContent,
     NavbarItem,
 } from "@nextui-org/react";
-import { DenDropdown } from "./dropdown";
 import { logoConfig } from "@/config/site";
+import { DenPopover } from "./popover";
 //#endregion
 
 export function Navigation({ items }: NavConfig) {
@@ -48,7 +48,7 @@ export function Navigation({ items }: NavConfig) {
                         ))}
                     </div>
                 ) : null}
-                <DenDropdown isOpenDefault={false}/>
+                <DenPopover/>
             </NavbarContent>
         </Navbar>
     );
