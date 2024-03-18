@@ -20,22 +20,22 @@ export const siteConfig: SiteConfig = {
 //#region Navigation
 export const logoConfig: NavItem = {
 	title: "Raphaël Alarçon",
-	href: "/",
+	href: "#home",
 };
 
 export const navConfig: NavConfig = {
 	items: [
 		{
 			title: "About",
-			href: "/about",
+			href: "#about",
 		},
 		{
 			title: "My work",
-			href: "/projects",
+			href: "#projects",
 		},
 		{
 			title: "Contact",
-			href: "/contact",
+			href: "#contact",
 		},
 	],
 };
