@@ -50,12 +50,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     fontSans.variable
                 )}>
                 <Compose providers={providers}>
-                    <div>
-                        <div className="font-sans">
-                            <Navigation items={navConfig.items} />
-                            {children}
-                        </div>
-                    </div>
+                    <Navigation items={navConfig.items} />
+                    {children}
                 </Compose>
             </body>
         </html>

@@ -1,5 +1,4 @@
 import { Optional } from "@/types/utility";
-import Link from "next/link";
 
 type PopoverItemProps = {
     startContent: React.ReactNode

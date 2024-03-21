@@ -37,7 +37,7 @@ export default function IndexPage() {
 				</section>
 			))}
 
-			<Breadcrumbs className="sticky bottom-4 ml-4">
+			<Breadcrumbs className="fixed bottom-4 ml-4">
 				<BreadcrumbItem href="/">Home</BreadcrumbItem>
 				<BreadcrumbItem href="/currentSection">{ currentSection }</BreadcrumbItem>
 			</Breadcrumbs>
