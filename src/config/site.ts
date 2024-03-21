@@ -1,5 +1,11 @@
-import { Project } from "@/components/sections/work/project";
-import { BackgroundConfig, NavConfig, NavItem, SiteConfig } from "@/types";
+import { ProjectCard } from "@/components/sections/work/project-card";
+import {
+	BackgroundConfig,
+	NavConfig,
+	NavItem,
+	Project,
+	SiteConfig,
+} from "@/types";
 
 //#region SiteConfig
 export const siteConfig: SiteConfig = {
@@ -76,6 +82,7 @@ export const projectsConfig: Project[] = [
 		url: "",
 		color: "#6c647c",
 		icon: "iut",
+		github: "https://github.com/raphael-alarcon/iut-onboarding",
 	},
 ];
 //#endregion
