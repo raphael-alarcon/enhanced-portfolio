@@ -20,7 +20,7 @@ export const DenPopover = () => {
     return (
         <Popover isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)} backdrop="opaque" placement="bottom-end" size="md" className="w-52">
             <PopoverTrigger>
-                <NavbarMenuToggle data-open={isOpen}/>
+                <NavbarMenuToggle data-open={isOpen} className="h-6"/>
             </PopoverTrigger>
             <PopoverContent data-placement="bottom-end" aria-labelledby="Menu dropdown" className="gap-4 items-start p-4">
                 { !isMediumDevice && (
